@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile])
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = "bin"
   spec.executables << 'h_ceasar_cipher'
   spec.require_paths = ["lib"]
 
