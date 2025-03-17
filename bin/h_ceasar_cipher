@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/h_ceasar_cipher'
+
+def print_usage
+  puts "Usage: h_ceasar_cipher encrypt|decrypt <text> <shift>"
+end
+
+if ARGV.size < 3
+  print_usage
+  exit(1)
+end
+
+command = ARGV[0]
+text = ARGV[1]
+shift = ARGV[2].to_i
+
+case command
+when 'encrypt'
+  puts HCeasarCipher.encrypt(text, shift)
+when 'decrypt'
+  puts HCeasarCipher.decrypt(text, shift)
+else
+  print_usage
+  exit(1)
+end
